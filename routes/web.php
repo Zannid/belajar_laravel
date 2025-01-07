@@ -27,6 +27,13 @@ Route::get('/contact', function(){
     return 'Selamat datang di contact';
 });
 
+Route::get('/siswa', function(){
+    
+    $data_siswa = ['Keyndra','Napis','Nabila','Daffa','Opet','Agus'];
+
+    return view('tampil',compact('data_siswa'));
+});
+
 //route parameter
 Route::get('/tes/{nama}/{tempatlahir}/{jeniskelamin}/{agama}/{alamat}', function($nama,$tempatl,$jenisk,$agama,$alamat){
     return 'Nama : '.$nama."<br> Tempat Lahir : ".$tempatl."<br> Jenis Kelamin : ".$jenisk."<br> Agama : ".$agama."<br> Alamat : ".$alamat;
