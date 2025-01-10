@@ -18,7 +18,9 @@ class PostsTableSeeder extends Seeder
         $posts = [
             ['title'=>'Tips cepat pintar', 'content'=>'lorem ipsum'],
             ['title'=>'Haruskah Menunda Belajar', 'content'=>'lorem ipsum'],
-            ['title'=>'Membangun Visi Misi Kesuksesan', 'content'=>'lorem ipsum']
+            ['title'=>'Membangun Visi Misi Kesuksesan1', 'content'=>'lorem ipsum'],
+            ['title'=>'Membangun Visi Misi Kesuksesan2', 'content'=>'lorem ipsum'],
+            ['title'=>'Membangun Visi Misi Kesuksesan3', 'content'=>'lorem ipsum'],
         ];
         // masukkan data ke database
         DB::table('posts')->insert($posts);

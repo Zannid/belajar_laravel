@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Barang;
+use App\Http\Controllers\PostsController;
+use App\Http\Controllers\SiswasController;
+use App\Http\Controllers\PpdbsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -106,3 +110,31 @@ Route::get('/latihan/{nama}/{notelp}/{jenisb}/{namab}/{jumlah}/{bayar}/', functi
     <br>Total Pembayaran : '.$total2
     ;
 });
+
+//routing dengan model
+Route::get('/post', [PostsController::class, 'menampilkan']);
+Route::get('/barang', [PostsController::class, 'menampilkan2']);
+
+// Route::get('/post', function(){
+
+//     $post = Post::all();
+//     $post = Post::where('id',3)->get();
+//     $post = Post::where('title','LIKE','%visi%')->get();
+
+//     return view('tampil_post',compact('post'));
+// });
+
+
+// Route::get('/barang', function(){
+
+//     $barang = Barang::all();
+//     return view('tampil_barang',compact('barang'));
+// });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//CRUD
+
+Route::resource('siswa', SiswasController::class);
+Route::resource('ppdb', PpdbsController::class);
