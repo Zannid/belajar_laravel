@@ -34,6 +34,10 @@
 
                             </select>
                         </div>
+                        <div class="form-group mb-2">
+                            <label class="form-table">Cover</label>
+                            <input type="file" class="form-control" name="cover">
+                        </div>
 
                         <button type="submit" class="btn btn-primary">Submit</button>
                 </form>

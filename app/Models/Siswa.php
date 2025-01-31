@@ -10,4 +10,10 @@ class Siswa extends Model
     use HasFactory;
     protected $fillable = ['id','nis','nama','jenis_kelamin','kelas'];
     public $timestamp = true;
+
+    public function deleteImage(){
+        if($this->cover && file_exists(public_path('image/siswa' .$this->cover))){
+            return unlink(public_path('image/siswa' . $this->cover));
+        }
+    }
 }

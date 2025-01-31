@@ -33,8 +33,14 @@
 
                             </select>
                         </div>
+                        <div class="form-group mb-2">
+                            <label class="form-table">Cover</label>
+                            <img src="{{ asset('/images/siswa/' . $siswa->cover) }}" width="100">
+                            <input type="file" class="form-control" name="cover" required>
+                        </div>
 
-                        <button type="submit" class="btn btn-primary">Submit</button>
+
+                        <button type="submit" class="btn btn-primary">Update</button>
                 </form>
                  </div>
                 
